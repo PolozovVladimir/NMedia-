@@ -123,6 +123,7 @@
         android:contentDescription="@string/viewing"
         android:padding="2dp"
         app:layout_constraintBottom_toBottomOf="@+id/share"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/share_quantity"
         app:layout_constraintTop_toTopOf="@+id/share"
         app:srcCompat="@drawable/baseline_remove_red_eye_24" />
@@ -133,6 +134,7 @@
         android:layout_height="wrap_content"
         android:autoLink="all"
         app:layout_constraintBottom_toBottomOf="@+id/share"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/viewing"
         app:layout_constraintTop_toTopOf="@+id/share"
         tools:text="1000" />
