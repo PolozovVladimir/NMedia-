@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
 
@@ -58,9 +58,9 @@
         android:id="@+id/barrier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierMargin="16dp"
         app:barrierDirection="bottom"
-        app:constraint_referenced_ids="avatar,published"/>
+        app:barrierMargin="16dp"
+        app:constraint_referenced_ids="avatar,published" />
 
     <TextView
         android:id="@+id/content"
@@ -76,8 +76,8 @@
         android:id="@+id/like"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="2dp"
         android:contentDescription="@string/like"
+        android:padding="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content"
         app:srcCompat="@drawable/baseline_favorite_border_24" />
@@ -96,9 +96,9 @@
         android:id="@+id/share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:contentDescription="@string/share"
         android:padding="2dp"
-        android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/like"
         app:layout_constraintStart_toEndOf="@+id/like_quantity"
         app:layout_constraintTop_toTopOf="@+id/like"
@@ -108,8 +108,8 @@
         android:id="@+id/share_quantity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:autoLink="all"
         android:layout_marginStart="6dp"
+        android:autoLink="all"
         app:layout_constraintBottom_toBottomOf="@+id/share"
         app:layout_constraintStart_toEndOf="@+id/share"
         app:layout_constraintTop_toTopOf="@+id/share"
@@ -119,12 +119,10 @@
         android:id="@+id/viewing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
         android:contentDescription="@string/viewing"
         android:padding="2dp"
         app:layout_constraintBottom_toBottomOf="@+id/share"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/share_quantity"
+        app:layout_constraintEnd_toStartOf="@+id/viewing_quantity"
         app:layout_constraintTop_toTopOf="@+id/share"
         app:srcCompat="@drawable/baseline_remove_red_eye_24" />
 
@@ -135,7 +133,6 @@
         android:autoLink="all"
         app:layout_constraintBottom_toBottomOf="@+id/share"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/viewing"
         app:layout_constraintTop_toTopOf="@+id/share"
         tools:text="1000" />
 
