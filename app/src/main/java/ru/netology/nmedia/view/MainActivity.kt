@@ -33,22 +33,24 @@ class MainActivity : AppCompatActivity() {
 
            }
            with(binding) {
+               likeQuantity.text = CountCalculator.calculator(post.likes)
                like.setImageResource(
                    if (post.likedByMe) {
                        R.drawable.baseline_favorite_24
                    } else {
                        R.drawable.baseline_favorite_border_24
                    }
+
                )
 
-               likeQuantity.text = CountCalculator.calculator(post.likes)
+
 
 
                like.setOnClickListener {
                    viewModel.like()
 
 
-                   likeQuantity.text = CountCalculator.calculator(post.likes)
+
 
                }
 

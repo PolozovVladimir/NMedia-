@@ -24,9 +24,9 @@ class PostRepositoryInMemory : PostRepository {
        post = post.copy(
             likedByMe = !post.likedByMe,
             likes = if (post.likedByMe) {
-                post.likes + 1
+                post.likes - 1
             }else {
-                post.likes - 1}
+                post.likes + 1}
         )
         data.value = post
     }
@@ -35,5 +35,6 @@ class PostRepositoryInMemory : PostRepository {
         post = post.copy(
             share = post.share +1
         )
+        data.value = post
     }
 }
