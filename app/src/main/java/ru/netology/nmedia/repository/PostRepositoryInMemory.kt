@@ -13,7 +13,7 @@ class PostRepositoryInMemory : PostRepository {
         likedByMe = false,
         shareByMe = false,
         likes = 1099,
-        share = 1097,
+        share = 1099,
 
         )
     private val data = MutableLiveData(post)
